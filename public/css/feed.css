@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Parisienne&family=Passion+One&family=Press+Start+2P&family=Roboto&family=Russo+One&display=swap');
+ 
+ *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+ }
+body {
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(148,233,216,1) 100%);
+        font-family: "Roboto";
+
+}
+header {
+    display: flex ;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.381);
+    border-radius: 0 0 16px 16px;
+    box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 10px 0;
+}
+.avatar {
+    display: flex;
+    align-items: center;
+}
+.w-24 {
+    width: 24px;
+}
+.rounded-full ,img  {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+main {
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 50px !important;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px solid black; */
+    width: 45% !important;
+    height: fit-content !important;
+}
+aside {
+    width: 20%;
+    height: fit-content !important;
+    text-align: center !important;
+}
+aside {
+    background: rgba(255, 255, 255, 0.381) !important;
+    border-radius: 16px  !important;
+    box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(5px) !important;
+    -webkit-backdrop-filter: blur(5px) !important;
+}
+
+aside a {
+    margin: 20px 0 !important;
+}
+
+button {
+    width: 90%;
+     margin: 0 auto;
+     background: rgba(255, 255, 255, 0.381) !important;
+    border-radius: 16px  !important;
+    box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(5px) !important;
+    -webkit-backdrop-filter: blur(5px) !important;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center !important;
+    /* grid-template-columns: 1fr 1fr; */
+    align-items: center !important;
+}
+    
+
+
+#titleinput {
+    width: 90% ;
+    padding: 0 10px;
+    border-radius: 20px;
+    height: 50px;
+}
+
+#postTxtArea {
+    width: 90% !important;
+    height: 100px  !important;
+    border-radius: 20px;
+    padding: 10px 10px;
+    border: none;
+    background-color: white;
+    /* background: rgba(255, 255, 255, 0.381) !important; */
+    border-radius: 16px  !important;
+    box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(5px) !important;
+    -webkit-backdrop-filter: blur(5px) !important;
+    margin: 10px 0;
+}
+
+input[type=submit] {
+    width: 30% ;
+    height: 40px;
+    border-radius: 20px;
+    background-color: white;
+    border: 1px solid lightskyblue;
+}
+
+
+
+.selection {
+    display: flex;
+    flex-direction: row;
+    /* display: flex !important ;
+    /* justify-content: center !important; */
+    /* height: fit-content !important; */
+    width: 100% !important;
+    /* border: 1px solid black;  */
+}
+select {
+    height: 40px !important;
+    /* padding: 20px ; */
+    width: 30% !important;
+    margin: 0 10px !important;
+}
+.feed-display {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center !important;
+    /* grid-template-columns: 1fr 1fr; */
+    align-items: center !important;
+    width: 100% !important;
+    /* border: 1px solid black !important; */
+   
+}
+
+.post-card {
+    background: rgba(255, 255, 255, 0.422) !important;
+    border-radius: 16px !important;
+    box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(5px) !important;
+    -webkit-backdrop-filter: blur(5px) !important;
+    width: 90% !important;
+    margin: 10px 0 !important;
+    padding: 10px 5px !important;
+}
+
+.moreButton {
+    margin:  0 auto;
+    /* border: 1px solid black; */
+    font-size: 20px;
+}
+
