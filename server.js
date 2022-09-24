@@ -35,7 +35,7 @@ app.use(methodOverride("_method"));
 
 
 
-Sessions
+// Sessions
 app.use(
     session({
       secret: 'keyboard cat',
@@ -58,8 +58,8 @@ app.use(flash())
 
 
 app.use("/", main)
-// app.use("/post", postsRoute)
-// app.use("/profile", profilesRoute)
+app.use("/post", postsRoute)
+app.use("/profile", profilesRoute)
 
 
 
