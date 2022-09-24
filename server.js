@@ -1,5 +1,5 @@
 const express = require('express')
-// const cors = require("cors")
+const cors = require("cors")
 const PORT = 8000
 const mongoose = require("mongoose")
 // const passport = require('passport')
@@ -18,6 +18,7 @@ const connectDB = require("./config/database")
 
 
 const app = express()
+app.use(cors())
 
 connectDB()
 
