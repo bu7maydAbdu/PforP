@@ -3,6 +3,7 @@ const Post = require("../models/Post")
 const Comment = require("../models/Comment")
 
 
+
 module.exports = {
     getProfile: async (req, res)=> {
           res.render("profile.ejs")
@@ -60,13 +61,17 @@ module.exports = {
     getVolunteers : async (req, res) => {
 
         try {
-            const volunteersPosts = await Post.find({postType:volunteer})
-       
-            res.render("feed.ejs", {volunteersPosts: volunteersPosts})
-            console.log("getting volunteers feed")
+
+            console.log("getting volunteers")
+        const volunteersPosts = await Post.find({postType : "volunteer"})
+        console.log(volunteersPosts)
+
+
+          
 
         }catch(err){
             console.log(err)
+          
         }
 
        

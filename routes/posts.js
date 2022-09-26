@@ -8,7 +8,7 @@ const { ensureAuth, ensureGuest } = require("../middleware/auth.js")
 
 router.get("/:id", postsController.getPost)
 router.post("/createPost",upload.single("file"), postsController.createPost)
-router.get("/volunteers", postsController.getVolunteers)
+
 
 
 

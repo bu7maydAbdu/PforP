@@ -68,11 +68,16 @@
 
            <section class="navBtns">
 
-              <a href="" ><h3>All Posts</h3></a>
-          <a href="" ><h3>volunteers posts</h3></a>
-          <a href="" ><h3>searchers posts</h3></a>
+              <a href="/feed" ><h3>All Posts</h3></a>
+              <!-- <a href="/post/volunteers" ><h3>volunteers posts</h3></a>
+          <a href="/post/searchers" ><h3>searchers posts</h3></a> -->
+          <div class="row justify-content-center mt-5">
+            <a class="btn btn-primary" href="/volunteers">Return to Feed</a>
+          </div> 
 
             </section>
+
+
 
         </aside>
         <section class="feed-center">
@@ -110,6 +115,8 @@
           </section> -->
           
             <section class="feed-display">
+
+          
                 <% for(let i=0; i < posts.length; i++) {%>
                   <section class="post-card">
                   
@@ -140,7 +147,10 @@
                     
                       
             
-                <% } %>
+                <% } %>            
+              
+
+               
             </section>
         </section> 
         
