@@ -23,11 +23,19 @@ sector: {
     default: 'general',
     enum: ['general', 'health', 'tech']
   },
+  
+postType: {
+    type: String,
+    default: 'volunteer',
+    enum: ['volunteer', 'searcher']
+  },
   image: {
-    type: String
+    type: String,
+    required : true
   },
   cloudinaryId: {
-    type: String
+    type: String,
+    required : true
   }
   
 })

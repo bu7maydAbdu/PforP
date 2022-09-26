@@ -1,5 +1,5 @@
 const express = require('express')
-const cors = require("cors")
+// const cors = require("cors")
 const PORT = 8000
 const mongoose = require("mongoose")
 const passport = require('passport')
@@ -13,13 +13,14 @@ require('dotenv').config({path: './config/.env'})
 const main = require("./routes/main")
 const postsRoute = require("./routes/posts")
 const profilesRoute = require("./routes/profile.js")
+const commentsRoute = require("./routes/comments")
 const connectDB = require("./config/database")
 
 require('./config/passport')(passport)
 
 
 const app = express()
-app.use(cors())
+// app.use(cors())
 
 connectDB()
 
@@ -64,6 +65,7 @@ app.use(flash())
 app.use("/", main)
 app.use("/post", postsRoute)
 app.use("/profile", profilesRoute)
+app.use("/comment", commentsRoute)
 
 
 

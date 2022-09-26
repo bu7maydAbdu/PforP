@@ -31,6 +31,7 @@
   </head>
   <body>
     <header class="container">
+      <i class="fa-solid fa-bars burgerMenu "></i>
       <div class="text-center">
         <h1 class=""><a href="/feed">P4P</a></h1>
       </div>
@@ -40,25 +41,50 @@
           <h3>My Profile</h3>
         </div>
         <div class="w-24 rounded-full">
-          <img src="https://placeimg.com/192/192/people" />
+          <img class="profilePic" src="https://placeimg.com/192/192/people" />
         </div>
       </div>
+
     </header>
     
     
     
-    <main>
-        <aside>
-          <a href=""><h3>All Posts</h3></a>
-            <a href=""><h3>volunteers posts</h3></a>
-            <a href=""><h3>Cases posts</h3></a>
+    <main >
+      <aside class="mobileSideMenu">
+        <i class="fa-solid fa-xmark"></i>
+            <section class="navBtns">
+
+              <a href="/feed" ><h3>All Posts</h3></a>
+          <a href="/post/volunteers" ><h3>volunteers posts</h3></a>
+          <a href="/post/searchers" ><h3>searchers posts</h3></a>
+
+            </section>
+        
+          
+
+      </aside>
+
+        <aside class="sideMenu">
+
+           <section class="navBtns">
+
+              <a href="" ><h3>All Posts</h3></a>
+          <a href="" ><h3>volunteers posts</h3></a>
+          <a href="" ><h3>searchers posts</h3></a>
+
+            </section>
+
         </aside>
         <section class="feed-center">
-          <form action="/post/createPost" method="POST">
+      
+          <form action="/post/createPost" enctype="multipart/form-data" method="POST">
 
 
-            <input type="text" name="title" id="titleinput" placeholder="title">
+            <input type="text" name="titleinput" id="titleinput" placeholder="title">
             <textarea name="content" id="postTxtArea" placeholder="write your post content here"></textarea>
+ 
+            <input type="file" class="form-control" id="imageUpload" name="file" size="100">
+         
             <section class="selection">
               <select name="postType" id="postType">    
                 <option value="volunteer">volunteer</option>
@@ -71,7 +97,7 @@
                 <option value="health">health</option>
                 <option value="tech">tech</option>
             </select>
-            <input type="file" class="form-control" id="imageUpload" name="file">
+            
             <input type="submit" value="submit">
             </section>
             
@@ -86,12 +112,24 @@
             <section class="feed-display">
                 <% for(let i=0; i < posts.length; i++) {%>
                   <section class="post-card">
+                  
+                    <div class="avatar">
+                     
+                      <div class="w-24 rounded-full">
+                        <img class="profilePic" src="https://placeimg.com/192/192/people" />
+                      </div>
+
+                      <div>
+                        <a href="/profile/<%= posts[i].createdBy %>"><h4><%= posts[i].userName %></h4></a>
+
+                      </div>
+                    </div>
                            
-                    <a href="/profile/<%= posts[i].createdBy %>"><h4><%= posts[i].userName %></h4></a>
+                    
                     <p ><%= posts[i].postText %></p>
                    
 
-                 
+                  
 
                     <a href="/post/<%= posts[i].id%>" class="moreButton"><i class="fa-solid fa-caret-down"></i></a>
                     <!-- <a href="" class="moreButton"><i class="fa-solid fa-eye"></i></a> -->

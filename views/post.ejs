@@ -42,22 +42,75 @@
           <h3>My Profile</h3>
         </div>
         <div class="w-24 rounded-full">
-          <img src="https://placeimg.com/192/192/people" />
+          <img class="profilePic" src="https://placeimg.com/192/192/people" />
         </div>
       </div>
     </header>
     
-<main>
+<main class="postMain">
     <section class="post-card">
+
+      <div class="avatar">
+        <div class="w-24 rounded-full">
+          <img class="profilePic" src="https://placeimg.com/192/192/people" />
+        </div>
+
+        <div>
+          <a href="/profile/<%= post.createdBy %>"><h4><%= post.userName %></h4></a>
+        </div>
+       
+      </div>
                  
-        <a href="/profile/<%= post.createdBy %>"><h4><%= post.userName %></h4></a>
+        
         <p ><%= post.postText %></p>
+
+        <% if(post.image != ""){ %>
+          
+          <img src="<%= post.image %>">
+      
+  <% } %>
+
+  
 
 
       </section>
-</main>
+        <form id="commentForm" action="/comment/createComment/<%= post._id %>" method="post" enctype="application/x-www-form-urlencoded">
+          <input type="text" name="commentText" id="commentText" />
+          <input type="submit" id="mysubmit" />
+        </form>
+
+        <section class="commentSection">
+
+          <% for(let i=0; i < comments.length; i++) {%>
+           
+              
+        <div class="avatar">
+          <div class="w-24 rounded-full">
+            <img class="profilePic" src="https://placeimg.com/192/192/people" />
+          </div>
+  
+          <div>
+            <a href="/profile/<%= comments[i].createdBy %>"><h4><%= comments[i].userName %></h4></a>
+          </div>
+         
+        </div>
+                   
+          
+          <p ><%= comments[i].commentText %></p>
+  
+             <hr>   
+      
+          <% } %>
+  
+        </section> 
     
-       
+</main>
+
+ 
+
+ 
+    
+  
         
           
             
