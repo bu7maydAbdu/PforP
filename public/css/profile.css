@@ -5,6 +5,10 @@
     padding: 0;
  }
 
+ a {
+    text-decoration: none;
+    color: black;
+ }
 
  .profileHeader {
     display: flex;
@@ -13,10 +17,15 @@
     height: 20vh !important;
     width: 100% !important;
     margin-top: 50px;
+    
 
  }
 
  .innerProfileHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100% !important;
     width: 70% !important;
     background: rgba(255, 255, 255, 0.381) !important;
@@ -24,10 +33,11 @@
     box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.1) !important;
     backdrop-filter: blur(5px) !important;
     -webkit-backdrop-filter: blur(5px) !important;
+    text-align: center;
  }
 
  .profileAvatar {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin: 0 auto;
     text-align: center;
  }
@@ -35,25 +45,34 @@
  .profileImageContainer {
     width: fit-content;
     height: fit-content;
+    /* border: 1px solid black; */
+
  }
 
  .bigProfilePic  {
     border-radius: 50%;
     width: 100px;
     height: 100px;
+    /* border: 1px solid black; */
+
 }
 
 .profileName {
     color: black;
+    /* border: 1px solid black; */
+
+
 }
 
 
 
 .profileMain {
+    position: relative;
     display: flex;
     justify-content: center !important;
+    align-items: center !important;
     width: 100% !important;
-    height: 500px;
+    height: fit-content;
     /* border: 1px solid black; */
 }
 
@@ -70,14 +89,15 @@
     justify-content: center !important;
     align-items: center;
     width: 40% !important;
-
+    
 
 }
 
 .profileStats {
     display: grid;
-    padding: 10px 0;
-    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px 0 10px 10px;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: flex-start;
     width: 30% !important;
     height: 100% !important;
     height: fit-content;
@@ -87,5 +107,22 @@
     box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.1) !important;
     backdrop-filter: blur(5px) !important;
     -webkit-backdrop-filter: blur(5px) !important;
+    align-self: flex-start;
+}
 
+
+@media all and (max-width : 893px) {
+    .profileMain {
+        flex-direction: column;
+        border: 1px solid black;
+    }
+
+    .profilePosts, .profileStats {
+        width:  90% !important;
+    margin: 10px 0;
+
+    }
+    .innerProfileHeader {
+        width: 90% !important;
+    }
 }

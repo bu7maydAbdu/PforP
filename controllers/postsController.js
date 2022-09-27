@@ -23,7 +23,7 @@ module.exports = {
             // console.log(req.user)
             console.log(req.body)
             const result = await cloudinary.uploader.upload(req.file.path)
-
+             console.log(req.file)
              await Post.create({
                 title : req.body.titleinput,
                 postText : req.body.content,
@@ -52,7 +52,7 @@ module.exports = {
 
             console.log(comments)
              
-            res.render("post.ejs", {post : postFound , comments : comments})
+            res.render("post.ejs", {post : postFound , comments : comments , user : req.user})
         // console.log(`getting post with id ${req.params.id}`)
 
 
@@ -67,7 +67,9 @@ module.exports = {
             console.log("getting volunteers")
         const volunteersPosts = await Post.find({postType : "volunteer"})
         console.log(volunteersPosts)
+           
 
+        res.render
 
           
 

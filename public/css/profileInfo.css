@@ -1,0 +1,18 @@
+input[type=file]{
+    width: 92%;
+    background-color: white;
+    border-radius: 16px;
+    margin-bottom: 10px;
+    border: 1px solid lightskyblue;
+
+}
+
+input[type=file]::-webkit-file-upload-button {
+    border: none;
+    background-color:lightblue;
+    
+    font-size: 20px;
+    padding: 5px 5px;
+    border-radius: 16px 0 0 16px;
+
+}

@@ -36,6 +36,13 @@
       <div class="text-center">
         <h1 class=""><a href="/feed">P4P</a></h1>
       </div>
+
+          <nav class="topNavigation">
+            <ul>
+              <a href="/feed"><li>Feed</li></a>
+              <a href="/logout"><li>LogOut</li></a>
+            </ul>
+          </nav>
       <a href="/profile/<%= user.id%>">
         <div class="avatar">
           <div>
@@ -60,12 +67,12 @@
 
             <div class="profileAvatar">
                 <div class="profileImageContainer">
-                  <img class="bigProfilePic" src="https://placeimg.com/192/192/people" />
+                  <img class="bigProfilePic" src="<%= profileInfos[0].profilePic%>" />
                 </div>
-                <h2 class="profileName"><%= profile.userName %></h2>
     
               </div>
     
+              <h2 class="profileName"><%= profile.userName %></h2>
 
         </section>
 
@@ -81,8 +88,8 @@
         <section class="profileStats">
 
             <h4>Posts made : <%= posts.length %></h4>
-            <h4> Skills :</h4>
-            <h4>Interests :</h4>
+            <h4> Skills : <%= profileInfos[0].skills %></h4>
+            <h4>Interests : <%= profileInfos[0].interests %></h4>
 
         </section>
 
@@ -94,7 +101,7 @@
                   <div class="avatar">
                    
                     <div class="w-24 rounded-full">
-                      <img class="profilePic" src="https://placeimg.com/192/192/people" />
+                      <img class="profilePic" src="<%= profileInfos[0].profilePic%>" />
                     </div>
 
                     <div>
