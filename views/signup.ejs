@@ -1,0 +1,27 @@
+<%- include('partials/header') -%>
+<main class="container">
+  <div class="cardContainer">
+    <section class="loginCard">
+                <% if (locals.messages.errors) { %>
+                    <% messages.errors.forEach( el => { %>
+                        <div class="alert alert-danger"><%= el.msg %></div>
+                    <% }) %>    
+                <% } %>
+                <% if (locals.messages.info) { %>
+                    <% messages.info.forEach( el => { %>
+                        <div class="alert alert-info"><%= el.msg %></div>
+                    <% }) %>    
+                <% } %>
+                <form class="loginForm" action="/signup" method="POST">
+                    
+                        <input type="text" class="form-control" id="userName" name="userName" placeholder="username">
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Email">
+                      <input type="password" class="form-control" id="password" name="password" placeholder="password">
+                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="confirm password">
+                    <button type="submit" class="btn btn-primary loginpageBtn">Sign Up</button>
+                  </form>
+            </section>
+        </div>
+    </main>
+
+<%- include('partials/footer') -%>

@@ -10,9 +10,11 @@ module.exports = {
     },
     
     getPostsFeed : async(req, res)=>{
+
         const posts = await Post.find()
+        console.log(req.user.id)
        
-             res.render("feed.ejs", {posts : posts})
+             res.render("feed.ejs", {posts : posts , user : req.user})
              console.log("getting feed")
     },
     createPost : async (req,res) => {

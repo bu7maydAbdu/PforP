@@ -12,9 +12,10 @@ module.exports = {
   })
 },
 getSignup : (req, res) => {
-  if (req.user) {
-    return res.redirect("/feed");
-  }
+  // if (req.user) {
+  //   return res.redirect("/feed");
+  // }
+
   res.render("signup.ejs", {
     title: "Create Account",
   });

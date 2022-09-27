@@ -1,0 +1,91 @@
+ * ,
+ *::before,
+ *::after {
+    margin: 0;
+    padding: 0;
+ }
+
+
+ .profileHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh !important;
+    width: 100% !important;
+    margin-top: 50px;
+
+ }
+
+ .innerProfileHeader {
+    height: 100% !important;
+    width: 70% !important;
+    background: rgba(255, 255, 255, 0.381) !important;
+    border-radius: 16px  !important;
+    box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(5px) !important;
+    -webkit-backdrop-filter: blur(5px) !important;
+ }
+
+ .profileAvatar {
+    border: 1px solid black;
+    margin: 0 auto;
+    text-align: center;
+ }
+
+ .profileImageContainer {
+    width: fit-content;
+    height: fit-content;
+ }
+
+ .bigProfilePic  {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.profileName {
+    color: black;
+}
+
+
+
+.profileMain {
+    display: flex;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 500px;
+    /* border: 1px solid black; */
+}
+
+.profilePosts, .profileStats {
+   
+    margin: 0 10px;
+    position: relative;
+}
+
+
+.profilePosts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center;
+    width: 40% !important;
+
+
+}
+
+.profileStats {
+    display: grid;
+    padding: 10px 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 30% !important;
+    height: 100% !important;
+    height: fit-content;
+    background-color: black !important;
+    background: rgba(255, 255, 255, 0.381) !important;
+    border-radius: 16px  !important;
+    box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(5px) !important;
+    -webkit-backdrop-filter: blur(5px) !important;
+
+}
