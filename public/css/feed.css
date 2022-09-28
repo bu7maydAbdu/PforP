@@ -209,7 +209,7 @@ input[type=submit] {
     font-family: "Roboto";
     font-size: 16px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.501)  !important;
-
+    cursor: pointer;
 }
 
 input[type=file]{
@@ -232,7 +232,8 @@ input[type=file]::-webkit-file-upload-button {
     padding: 5px 5px;
     border-radius: 16px 0 0 16px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.501)  !important;
-    
+    cursor: pointer;
+
 }
 
 

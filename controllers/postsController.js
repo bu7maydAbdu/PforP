@@ -27,11 +27,10 @@ module.exports = {
         try { 
             console.log(req.user)
             console.log(req.body)
+            if(req.file){
+
             const result = await cloudinary.uploader.upload(req.file.path)
-            const profile = await ProfileInfo.findOne({user : req.user._id})
-             console.log(req.file)
-             console.log(profile)
-             await Post.create({
+            await Post.create({
                 title : req.body.titleinput,
                 postText : req.body.content,
                 createdBy : req.user._id,
@@ -42,6 +41,22 @@ module.exports = {
                 image: result.secure_url,
                 cloudinaryId: result.public_id
                 })
+
+            }
+            const profile = await ProfileInfo.findOne({user : req.user._id})
+             console.log(profile)
+
+
+             await Post.create({
+                title : req.body.titleinput,
+                postText : req.body.content,
+                createdBy : req.user._id,
+                userName : req.user.userName,
+                profilePic : profile.profilePic,
+                postType : req.body.postType,
+                sector : req.body.sector,
+                })
+             
 
                 console.log("post has been added!");
                 res.redirect("/feed");

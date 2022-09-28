@@ -38,7 +38,6 @@ postType: {
   },
   cloudinaryId: {
     type: String,
-    required : true
   }
   
 })
