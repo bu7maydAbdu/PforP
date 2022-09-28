@@ -19,6 +19,8 @@ router.get("/getInfoUpload", ensureAuth, profileController.getInfoUpload)
 router.post("/postProfileInfo",upload.single("file"), profileController.postInfo)
 router.get("/logout", authController.logout);
 router.get("/volunteers", postsController.getVolunteers )
+router.get("/searchers", postsController.getSearchers )
+
 
 
 

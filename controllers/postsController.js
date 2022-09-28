@@ -1,6 +1,10 @@
 const cloudinary = require("../middleware/cloudinary")
 const Post = require("../models/Post")
 const Comment = require("../models/Comment")
+const User = require("../models/User")
+const ProfileInfo = require("../models/ProfileInfo")
+
+
 
 
 
@@ -12,6 +16,7 @@ module.exports = {
     getPostsFeed : async(req, res)=>{
 
         const posts = await Post.find()
+        
         console.log(req.user.id)
        
              res.render("feed.ejs", {posts : posts , user : req.user})
@@ -20,15 +25,18 @@ module.exports = {
     createPost : async (req,res) => {
 
         try { 
-            // console.log(req.user)
+            console.log(req.user)
             console.log(req.body)
             const result = await cloudinary.uploader.upload(req.file.path)
+            const profile = await ProfileInfo.findOne({user : req.user._id})
              console.log(req.file)
+             console.log(profile)
              await Post.create({
                 title : req.body.titleinput,
                 postText : req.body.content,
                 createdBy : req.user._id,
                 userName : req.user.userName,
+                profilePic : profile.profilePic,
                 postType : req.body.postType,
                 sector : req.body.sector,
                 image: result.secure_url,
@@ -67,9 +75,15 @@ module.exports = {
             console.log("getting volunteers")
         const volunteersPosts = await Post.find({postType : "volunteer"})
         console.log(volunteersPosts)
+
+        if(!volunteersPosts){
+             
+            res.render("postsNotFound.ejs" , { user : req.user})
+
+        }
            
 
-        res.render
+        res.render("volunteersPosts.ejs" , {volunteersPosts : volunteersPosts, user : req.user})
 
           
 
@@ -80,5 +94,13 @@ module.exports = {
 
        
 
+    },
+
+    getSearchers : async (req, res) => {
+        const searchersPosts = await Post.find({postType : "searcher"})
+        console.log(searchersPosts)
+           
+
+        res.render("searchersPosts.ejs" , {searchersPosts : searchersPosts, user : req.user})
     }
 }

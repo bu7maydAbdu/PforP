@@ -131,11 +131,16 @@ section{
     margin: 10px 0;
     /* border: 1px solid black; */
     background-color: rgba(148, 233, 216, 0.125) ;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.501) inset !important;
+    border-radius: 16px ;
     padding: 5px 0;
 }
 
 .navBtns a:hover {
     background-color: rgba(148, 233, 216, 0.211) ;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.501)  !important;
+    /* border-radius: 16px ; */
+    
 
 }
 
@@ -168,6 +173,10 @@ form {
     height: 50px;
     border: none;
     background-color: white;
+    font-family: "Roboto";
+    font-size: 16px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.501)  !important;
+
 }
 
 #postTxtArea {
@@ -179,11 +188,13 @@ form {
     background-color: white;
     /* background: rgba(255, 255, 255, 0.381) !important; */
     border-radius: 16px  !important;
-    box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.501)  !important;
     backdrop-filter: blur(5px) !important;
     -webkit-backdrop-filter: blur(5px) !important;
     margin: 10px 0;
     border: 1px solid lightskyblue;
+    font-family: "Roboto";
+    font-size: 16px;
 
 }
 
@@ -191,8 +202,14 @@ input[type=submit] {
     width: 30% ;
     height: 40px;
     border-radius: 20px;
-    background-color: white;
+    color: white;
+    background: rgba(148,233,216,1) !important;    
+    /* background-color: white; */
     border: 1px solid lightskyblue;
+    font-family: "Roboto";
+    font-size: 16px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.501)  !important;
+
 }
 
 input[type=file]{
@@ -201,17 +218,21 @@ input[type=file]{
     border-radius: 16px;
     margin-bottom: 10px;
     border: 1px solid lightskyblue;
+    font-family: "Roboto";
+    font-size: 16px;   
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.501)  !important;
 
 }
 
 input[type=file]::-webkit-file-upload-button {
     border: none;
-    background-color:lightblue;
-    
+    color: white;
+    background: rgba(148,233,216,1) !important;    
     font-size: 20px;
     padding: 5px 5px;
     border-radius: 16px 0 0 16px;
-
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.501)  !important;
+    
 }
 
 
@@ -225,6 +246,7 @@ input[type=file]::-webkit-file-upload-button {
     /* height: fit-content !important; */
     width: 100% !important;
     /* border: 1px solid black;  */
+    font-family: "Roboto" !important;
 }
 select {
     height: 40px !important;
@@ -233,6 +255,9 @@ select {
     width: 30% !important;
     margin: 0 10px !important;
     border: 1px solid lightskyblue;
+    font-size: 16px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.501)  !important;
+    
 
 }
 .feed-display {
@@ -256,8 +281,13 @@ select {
     margin: 10px 0 !important;
     padding: 10px 5px !important;
 }
+
+.postTitleDivision {
+    /* border: 1px solid black; */
+    width: 77%;
+}
 p {
-    
+    position: relative;
     margin: 10px 0 10px 10% ;
 }
 
@@ -265,6 +295,16 @@ p {
     height: 300px ;
     width: 50%;
     margin-left: 10%;
+}
+
+.smallPostImage {
+    position: absolute;
+    right: 3px;
+    width: 20% ;
+    height: 95%;
+    border-radius: 0 16px 16px 0;
+    /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.501)   !important; */
+
 }
 
 .moreButton {

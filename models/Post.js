@@ -18,6 +18,10 @@ userName : {
     required : true
 
 },
+profilePic : { 
+  type: String,
+  required : true
+},
 sector: {
     type: String,
     default: 'general',
@@ -31,7 +35,6 @@ postType: {
   },
   image: {
     type: String,
-    required : true
   },
   cloudinaryId: {
     type: String,
