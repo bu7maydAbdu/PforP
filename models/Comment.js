@@ -18,6 +18,10 @@ userName : {
     required : true
 
 },
+profilePic : { 
+    type: String,
+    required : true
+  },
 upVote : {
     type : Number,
     required : true,
