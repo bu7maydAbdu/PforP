@@ -112,6 +112,13 @@
                          
                   
                   <p ><%= posts[i].postText %></p>
+
+
+                  <% if(posts[i].image){ %>
+          
+                    <img loading="lazy" class="smallPostImage" src="<%= posts[i].image %>">
+                
+                      <% } %>
                  
 
                 

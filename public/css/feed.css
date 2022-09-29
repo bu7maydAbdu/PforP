@@ -46,17 +46,21 @@ header {
 } */
 
 .avatar {
+    position: relative;
     display: flex;
     align-items: center;
     /* border: 1px solid black; */
+    z-index: 1000;
 }
 .w-24 {
     width: 24px;
 }
 .rounded-full , .profilePic  {
+    position: relative;
     border-radius: 50%;
     width: 50px;
     height: 50px;
+    z-index: 1000;
 }
 
 .burgerMenu  {
@@ -281,15 +285,29 @@ select {
     width: 90% !important;
     margin: 10px 0 !important;
     padding: 10px 5px !important;
+    /* transform: translateX(100px); 
+     opacity: 0;
+    transition: 150ms;
+    overflow: hidden; */
+
+}
+
+.show {
+transform: translateX(0);
+opacity: 1;
 }
 
 .postTitleDivision {
+    position: relative;
     /* border: 1px solid black; */
     width: 77%;
+    z-index: 1000;
 }
 p {
     position: relative;
     margin: 10px 0 10px 10% ;
+    z-index: 1000;
+
 }
 
 .postImg {
@@ -300,18 +318,28 @@ p {
 
 .smallPostImage {
     position: absolute;
-    right: 3px;
-    width: 20% ;
-    height: 95%;
+    right: 0;
+    width: 30%;
+    height: 100%;
+    /* aspect-ratio: attr(width) / attr(height); */
+    /* background: rgba(255, 255, 255, 0.422) !important; */
+    /* border-radius: 16px !important; */
+    /* box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.1) !important; */
+    backdrop-filter: blur(5px) !important;
+    -webkit-backdrop-filter: blur(5px) !important;
     border-radius: 0 16px 16px 0;
     /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.501)   !important; */
+    /* opacity: 0.2; */
+    overflow: hidden;
 
-}
+} 
 
 .moreButton {
+    position: relative;
     margin:  0 auto;
     /* border: 1px solid black; */
     font-size: 20px;
+    z-index: 1000;
 }
 
 

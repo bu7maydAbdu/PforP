@@ -31,6 +31,8 @@ module.exports = {
             if(req.file){
 
             const result = await cloudinary.uploader.upload(req.file.path)
+            const profile = await ProfileInfo.findOne({user : req.user._id})
+
             await Post.create({
                 title : req.body.titleinput,
                 postText : req.body.content,

@@ -22,13 +22,43 @@ function closeMenu(){
 
 // profile pic click 
 
-const avatar = document.querySelector(".avatar")
+// const avatar = document.querySelector(".avatar")
 
-avatar.addEventListener("click", toggleProgileMenu)
+// avatar.addEventListener("click", toggleProgileMenu)
 
 
-function toggleProgileMenu(){
+// function toggleProgileMenu(){
     
-}
+// }
 
+
+
+
+//intersection oberver
+
+
+const cards = document.querySelectorAll(".post-card")
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    entry.target.classList.toggle("show", entry.isIntersecting)
+    // if(entry.isIntersecting) observer.unobserve(entry.target)
+  })
+},
+{
+  threshold : 1,
+  // root : "",
+  // rootMargin : "100px"
+})
+
+// const bottomCardObsrver = new IntersectionObserver(entries => {
+//   const bottomCard = entries[0]
+//   if(!bottomCard.isIntersecting) return
+//   loadMoreCards()
+// })
+//  bottomCardObsrver.observe(document.querySelector(".post-card:last-child"))
+// cards.forEach(card => {
+//   observer.observe(card)
+
+// })
 
