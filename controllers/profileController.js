@@ -13,7 +13,7 @@ module.exports = {
         const profile = await User.findById({_id : request.params.id})
         const profileInfos = await ProfileInfo.find({user : request.params.id}).lean()
         const posts = await Post.find({ createdBy: request.params.id})
-        console.log(profileInfos)
+        console.log(profile)
         // console.log(posts)
         response.render("profile.ejs" , {profile : profile, user : request.user, posts :posts , profileInfos : profileInfos})
     },

@@ -62,8 +62,24 @@
     </header>
     
     <section class="profileHeader">
+        
 
         <section class="innerProfileHeader">
+
+            <% if(!profile){ %>
+
+
+                <div class="profileAvatar">
+                    <div class="profileImageContainer">
+                      <img class="bigProfilePic" src="https://res.cloudinary.com/moabdu/image/upload/v1664388904/awjad3ngrlxmmfbnykdk.png" />
+                    </div>
+        
+                  </div>
+        
+                  <h2 class="profileName">user not found !</h2>
+          
+            
+                  <% } else { %>
 
             <div class="profileAvatar">
                 <div class="profileImageContainer">
@@ -73,6 +89,8 @@
               </div>
     
               <h2 class="profileName"><%= profile.userName %></h2>
+
+              <% }  %>
 
         </section>
 
@@ -111,7 +129,7 @@
                   </div>
                          
                   
-                  <p ><%= posts[i].title %></p>
+                  <p ><%= posts[i].postText %></p>
 
 
                   <% if(posts[i].image){ %>

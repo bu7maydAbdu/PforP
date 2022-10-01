@@ -130,7 +130,7 @@
 
           
                 <% for(let i=0; i < posts.length; i++) {%>
-                  <section class="post-card">
+                  <section loading="lazy" class="post-card">
                   
                     <div class="avatar">
                     
@@ -148,15 +148,17 @@
                        
                     <div class="postTitleDivision">
 
-                      <p ><%= posts[i].postText %></p>
+                      <p ><%= posts[i].title %></p>
 
 
                     </div>
+
+                    <h5 class="sector-tag"><%= posts[i].sector %></h5>
                     
 
                     <% if(posts[i].image){ %>
           
-                      <img loading="lazy" class="smallPostImage" src="<%= posts[i].image %>">
+                      <img height="100" width="100" loading="lazy" class="smallPostImage" src="<%= posts[i].image %>">
                   
                         <% } %>
                    
