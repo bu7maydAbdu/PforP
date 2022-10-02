@@ -1,6 +1,7 @@
 const burgerMenuLogo = document.querySelector(".burgerMenu ")
 const menu = document.querySelector(".mobileSideMenu")
 const crossBtn = document.querySelector(".fa-xmark")
+const deletePostBtn = document.querySelector(".delete-post")
 
 burgerMenuLogo.addEventListener("click", displayMenu)
 
@@ -16,6 +17,12 @@ function closeMenu(){
   menu.style.display = "none"
   burgerMenuLogo.style.color = "black"   
     
+}
+
+deletePostBtn.addEventListener("click", deletePostModal)
+
+function deletePostModal({
+     
 }
 
 

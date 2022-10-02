@@ -74,6 +74,33 @@
         
         <p ><%= post.postText %></p>
 
+
+        <%if(post.createdBy == user.id){ %>
+
+          <button class="btn btn-primary fa fa-trash delete-option"></button>
+
+                  <section class="delete-modal">
+                    <form
+                    action="/post/deletePost/<%= post.id %>?_method=DELETE"
+                    method="POST"
+                    class="delete-form"
+                  >
+                    <button class=" fa fa-trash delete-post" type="submit" value="Delete"><h5>Delete</h5></button>
+                  </form>
+
+
+                  <button class=" cancel-delete" > <h5>Cancel</h5></button>
+
+
+                  </section>
+             
+
+
+
+
+          
+          <%}%>
+
         <% if(post.image != ""){ %>
           
           <img src="<%= post.image %>">
