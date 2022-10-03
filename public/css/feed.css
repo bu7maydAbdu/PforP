@@ -6,6 +6,10 @@
  }
 body {
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(148,233,216,1) 100%);
+    /* background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgb(0, 39, 31) 100%); */
+    /* background: rgba(3, 64, 4, 0.737); */
+
+
         font-family: "Roboto";
 
 }
@@ -18,6 +22,10 @@ header {
     justify-content: space-around;
     align-items: center;
     background: rgba(255, 255, 255, 0.381);
+    /* background: rgba(255, 255, 255, 0.15);
+     */
+     /* background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgb(4, 72, 59) 100%); */
+
     border-radius: 0 0 16px 16px;
     box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);

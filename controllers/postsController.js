@@ -45,20 +45,25 @@ module.exports = {
                 cloudinaryId: result.public_id
                 })
 
+            } else {
+
+                const profile = await ProfileInfo.findOne({user : req.user._id})
+                console.log(profile)
+   
+   
+                await Post.create({
+                   title : req.body.titleinput,
+                   postText : req.body.content,
+                   createdBy : req.user._id,
+                   userName : req.user.userName,
+                   profilePic : profile.profilePic,
+                   postType : req.body.postType,
+                   sector : req.body.sector,
+                   })
+
+
             }
-            const profile = await ProfileInfo.findOne({user : req.user._id})
-             console.log(profile)
-
-
-             await Post.create({
-                title : req.body.titleinput,
-                postText : req.body.content,
-                createdBy : req.user._id,
-                userName : req.user.userName,
-                profilePic : profile.profilePic,
-                postType : req.body.postType,
-                sector : req.body.sector,
-                })
+           
              
 
                 console.log("post has been added!");
