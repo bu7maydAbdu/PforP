@@ -88,6 +88,19 @@ module.exports = {
             console.log(err)
         }
     },
+    deletePost: async (req, res) => {
+        try {
+          let post = await Post.findById({ _id: req.params.id });
+          
+          await cloudinary.uploader.destroy(post.cloudinaryId);
+
+          await Post.remove({ _id: req.params.id });
+          console.log("Deleted Post");
+          res.redirect("/profile");
+        } catch (err) {
+          res.redirect("/profile");
+        }
+      },
     getVolunteers : async (req, res) => {
 
         try {

@@ -1,28 +1,37 @@
 const burgerMenuLogo = document.querySelector(".burgerMenu ")
 const menu = document.querySelector(".mobileSideMenu")
 const crossBtn = document.querySelector(".fa-xmark")
-const deletePostBtn = document.querySelector(".delete-post")
+const deletePostBtn = document.querySelector(".delete-option")
+const deleteModal = document.querySelector(".delete-modal")
+const cancelPostDelete = document.querySelector(".cancel-delete")
 
-burgerMenuLogo.addEventListener("click", displayMenu)
+// burgerMenuLogo.addEventListener("click", displayMenu)
 
-function displayMenu(){
-  menu.style.display = "block"
-  burgerMenuLogo.style.color = "transparent"
-}
+// function displayMenu(){
+//   menu.style.display = "block"
+//   burgerMenuLogo.style.color = "transparent"
+// }
 
 
-crossBtn.addEventListener("click", closeMenu )
+// crossBtn.addEventListener("click", closeMenu )
 
-function closeMenu(){
-  menu.style.display = "none"
-  burgerMenuLogo.style.color = "black"   
+// function closeMenu(){
+//   menu.style.display = "none"
+//   burgerMenuLogo.style.color = "black"   
     
-}
+// }
 
 deletePostBtn.addEventListener("click", deletePostModal)
 
-function deletePostModal({
-     
+cancelPostDelete.addEventListener("click", cencelDeletePostModal)
+
+function deletePostModal(){
+deleteModal.style.display = "grid"
+console.log("click click")
+}
+
+function cencelDeletePostModal(){
+  deleteModal.style.display = "none"
 }
 
 

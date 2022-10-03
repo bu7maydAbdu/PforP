@@ -71,15 +71,17 @@
        
       </div>
                  
-        
-        <p ><%= post.postText %></p>
+      <h3 class="title"><%= post.title %></h3>
+      <h5 class="sector-tag"><%= post.sector %></h5>
 
+        <p ><%= post.postText %></p>
+        
 
         <%if(post.createdBy == user.id){ %>
 
-          <button class="btn btn-primary fa fa-trash delete-option"></button>
+          <button class="btn btn-primary fa fa-trash delete-option delete-option-style"></button>
 
-                  <section class="delete-modal">
+                  <section class="delete-modal ">
                     <form
                     action="/post/deletePost/<%= post.id %>?_method=DELETE"
                     method="POST"

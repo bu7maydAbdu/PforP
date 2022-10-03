@@ -29,9 +29,15 @@ body {
     padding: 10px 5px !important;
 }
 
+.title {
+    /* border: 1px solid black; */
+    text-align: center;
+}
+
 
 .commentSection {
     /* border: 1px solid black; */
+    margin-top: 20px;
     width: 55% !important;
    
 }
@@ -40,7 +46,7 @@ body {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.501)   !important;
     border-radius: 16px;
     margin-bottom: 10px;
-    width: 90%;
+    width: 100% !important;
     backdrop-filter: blur(5px) !important;
     -webkit-backdrop-filter: blur(5px) !important;
 }
@@ -57,23 +63,24 @@ body {
 
 
 
-/* .fa-ellipsis {
+ .delete-option-style {
 
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 10px;
+    right: 10px;
     font-size: 20px ;
     color: rgb(77, 216, 188);
-    width: fit-content;
+    width: fit-content ;
     border: none;
     cursor: pointer;
+    z-index: 1000;
 
-} */
+}
 
 
 .delete-modal {
     position: absolute !important;
-    display: grid !important;
+    display: none ;
     grid-template-columns: 1fr 1fr;
      justify-content: center !important;
     align-items: center !important;
@@ -94,6 +101,10 @@ body {
 
 
 }
+
+
+
+
 
 
 .delete-post {
