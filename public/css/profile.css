@@ -73,7 +73,7 @@
     align-items: center !important;
     width: 100% !important;
     height: fit-content;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .profilePosts, .profileStats {
@@ -89,7 +89,7 @@
     justify-content: center !important;
     align-items: center;
     width: 60% !important;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     
 
 }
@@ -110,7 +110,7 @@
     backdrop-filter: blur(5px) !important;
     -webkit-backdrop-filter: blur(5px) !important;
     align-self: flex-start;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 
 }
 
