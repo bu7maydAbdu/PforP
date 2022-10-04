@@ -98,8 +98,11 @@ module.exports = {
     deletePost: async (req, res) => {
         try {
           let post = await Post.findById({ _id: req.params.id });
+
+          if(post.image){
+            await cloudinary.uploader.destroy(post.cloudinaryId);
+          }
           
-          await cloudinary.uploader.destroy(post.cloudinaryId);
 
           await Post.remove({ _id: req.params.id });
                     console.log("Deleted Post");
