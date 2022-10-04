@@ -33,11 +33,20 @@
   </head>
   <body>
     <header class="container">
+      <i class="fa-solid fa-bars burgerMenu "></i>
+
       <div class="text-center">
         <h1 class=""><a href="/feed">P4P</a></h1>
       </div>
       <nav class="topNavigation">
+        
+        
+
+
+       </aside>
         <ul>
+          <a href="/volunteers" ><li>volunteers</li></a>
+          <a href="/searchers" ><li>searchers</li></a>
           <a href="/feed"><li>Feed</li></a>
           <a href="/logout"><li>LogOut</li></a>
         </ul>
@@ -45,9 +54,9 @@
        
       <a href="/profile/<%= user.id%>">
         <div class="avatar">
-          <div>
+          <!-- <div>
             <h3>My Profile</h3>
-          </div>
+          </div> -->
           <div class="w-24 rounded-full">
             <img class="profilePic" src="<%= profileInfos.profilePic %>" />
           </div>
@@ -58,6 +67,22 @@
     </header>
     
 <main class="postMain">
+  <aside class="mobileSideMenu">
+    <i class="fa-solid fa-xmark"></i>
+        <section class="navBtns">
+
+          <a href="/feed" ><h3>Feed</h3></a>
+      <a href="/volunteers" ><h3>volunteers posts</h3></a>
+      <a href="/searchers" ><h3>searchers posts</h3></a>
+      <!-- <a href="/feed"><h3>Feed</h3></a> -->
+      <a href="/logout"><h3>LogOut</h3></a>
+
+        </section>
+    
+      
+
+  </aside>
+   
     <section class="post-card">
 
       <div class="avatar">
@@ -83,7 +108,7 @@
 
                   <section class="delete-modal ">
                     <form
-                    action="/post/deletePost/<%= post.id %>?_method=DELETE"
+                    action="/post/deletePost/<%= post._id %>?_method=DELETE"
                     method="POST"
                     class="delete-form"
                   >

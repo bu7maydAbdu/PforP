@@ -6,6 +6,12 @@
     /* font-family: "Roboto"; */
 
 }
+
+.sideMenu .navBtns{
+    display: flex !important;
+    flex-direction: row;
+    width: 50px !important;
+}
 body {
     font-family: "Roboto";
 }
@@ -37,9 +43,23 @@ body {
 
 .commentSection {
     /* border: 1px solid black; */
+    background: rgba(255, 255, 255, 0.222) !important;
+    border-radius: 16px;
+    padding: 10px 10px;
     margin-top: 20px;
     width: 55% !important;
    
+} 
+#commentForm {
+    /* background-color: black; */
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+#commentForm input[type = submit]{
+    position: relative;
+    width: 100px;
+    height: 120px;
 }
 
 .comment {
@@ -150,3 +170,33 @@ body {
 .delete-post h5 , .cancel-delete h5 {
     font-family: "Roboto" !important;
 }
+
+
+
+@media all and (max-width: 690px) {
+    .post-card {
+        width: 90% !important;
+    }
+
+
+    .commentSection {
+     
+        width: 80% !important;
+       
+    } 
+    .burgerMenu {
+        display: block;
+        font-size: 30px;
+    }
+
+    .sideMenu {
+        display: none;
+    }
+
+    .feed-center {
+        width: 90% !important;
+    }
+  
+  
+}
+

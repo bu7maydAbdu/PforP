@@ -15,6 +15,8 @@ module.exports = {
     
     getPostsFeed : async(req, res)=>{
         const profileInfos = await ProfileInfo.findOne({user : req.user.id}).lean()
+        // const user = await User.findOne({user : req.user.id}).lean()
+
         
         const posts = await Post.find()
         
@@ -100,10 +102,10 @@ module.exports = {
           await cloudinary.uploader.destroy(post.cloudinaryId);
 
           await Post.remove({ _id: req.params.id });
-          console.log("Deleted Post");
-          res.redirect("/profile");
+                    console.log("Deleted Post");
+          res.redirect("/feed");
         } catch (err) {
-          res.redirect("/profile");
+          res.redirect("/feed");
         }
       },
     getVolunteers : async (req, res) => {
