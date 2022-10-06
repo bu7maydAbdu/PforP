@@ -86,7 +86,9 @@ header  {
     /* border: 1px solid black; */
     width: 100%;
 }
-
+ .sloganDiv p {
+    font-size:  20px;
+ }
 
 .slogan {
     font-size: 5em;

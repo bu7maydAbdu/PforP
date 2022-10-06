@@ -15,7 +15,7 @@ crossBtn.addEventListener("click", closeMenu )
 
 function closeMenu(){
   menu.style.display = "none"
-  burgerMenuLogo.style.color = "black"   
+  burgerMenuLogo.style.color = "rgb(45, 197, 166)"   
     
 }
 
