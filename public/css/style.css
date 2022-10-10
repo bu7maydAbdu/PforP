@@ -79,7 +79,7 @@ header  {
     /* border: 1px solid black; */
     width: 700px;
     font-size: 10px;
-
+    /* font-weight: bolder !important; */
 }
 
 .sloganDiv {
