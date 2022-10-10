@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pharmee</title>
+    <title><%= post.userName %>'s <%= post.title %></title>
     <link
       rel="icon"
       type="image/png"
@@ -127,6 +127,21 @@
 
           
           <%}%>
+
+          <section class="promotionVotes">
+            <form
+            class="col-1"
+            action="/post/likePost/<%= post._id %>?_method=PUT"
+            method="POST"
+          >
+            <button class="fa-regular fa-circle-up" type="submit"></button>
+          </form>
+          <p><%= post.promotes %></p>
+          </section>
+
+       
+
+          <!-- <i class="fa-regular fa-circle-up"></i> -->
 
         <% if(post.image != ""){ %>
           

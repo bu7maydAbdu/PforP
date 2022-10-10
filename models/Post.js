@@ -38,7 +38,11 @@ postType: {
   },
   cloudinaryId: {
     type: String,
-  }
+  },
+  promotes : {
+    type : Number,
+    required : true,
+}
   
 })
 

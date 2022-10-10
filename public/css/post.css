@@ -171,7 +171,35 @@ body {
     font-family: "Roboto" !important;
 }
 
+.promotionVotes {
+    background-color: white;
+    display: flex !important;
+    flex-direction: row;
+    width: fit-content !important;
+    padding: 0 10px;
+    border-radius: 16px;
+    /* flex; */
+}
+.promotionVotes p {
+    font-weight: bold;
+    /* box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.1) inset !important; */
 
+}
+
+.fa-circle-up {
+
+    font-size: 20px;
+    color: rgba(77, 216, 188, 0.343);
+    background-color: white;
+    width: fit-content;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+.fa-circle-up:hover {
+    color: rgb(77, 216, 188);
+
+}
 
 @media all and (max-width: 690px) {
     .post-card {

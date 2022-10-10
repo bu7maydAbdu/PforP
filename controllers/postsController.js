@@ -44,7 +44,8 @@ module.exports = {
                 postType : req.body.postType,
                 sector : req.body.sector,
                 image: result.secure_url,
-                cloudinaryId: result.public_id
+                cloudinaryId: result.public_id,
+                promotes : 0
                 })
 
             } else {
@@ -95,6 +96,20 @@ module.exports = {
             console.log(err)
         }
     },
+    promotePost: async (req, res) => {
+        try {
+          await Post.findOneAndUpdate(
+            { _id: req.params.id },
+            {
+              $inc: { promotes: 1 },
+            }
+          );
+          console.log("Likes +1");
+          res.redirect(`/post/${req.params.id}`);
+        } catch (err) {
+          console.log(err);
+        }
+      },
     deletePost: async (req, res) => {
         try {
           let post = await Post.findById({ _id: req.params.id });
