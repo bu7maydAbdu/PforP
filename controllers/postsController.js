@@ -62,6 +62,8 @@ module.exports = {
                    profilePic : profile.profilePic,
                    postType : req.body.postType,
                    sector : req.body.sector,
+                   promotes : 0
+
                    })
 
 
