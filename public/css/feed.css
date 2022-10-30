@@ -130,7 +130,7 @@ section{
 .sideMenu {
     display: flex !important;
     width: 20%;
-    height: 80vh !important;
+    height: 20vh !important;
     text-align: center !important;
 }
 .sideMenu{
@@ -421,7 +421,7 @@ p {
     }
 
     .sideMenu , .topNavigation {
-        display: none;
+        display: none !important;
     }
 
     .feed-center {
