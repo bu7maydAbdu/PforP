@@ -14,9 +14,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20vh !important;
+    height: 25vh !important;
     width: 100% !important;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     
 
  }
@@ -52,9 +52,7 @@
     width: 40vw !important;
     /* background-color: white; */
  }
- .innerProfileHeader {
-    background-color: green;
- }
+
 
  .innerProfileHeader {
     display: flex;
