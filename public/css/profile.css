@@ -21,15 +21,50 @@
 
  }
 
+
+
+ main {
+    display: flex;
+    margin-top: 0 !important;
+    justify-content: space-between !important;
+    height: fit-content;
+    width: 99vw;
+    /* background-color: black; */
+ }
+
+
+ .SideMenu {
+    /* position: absolute !important; */
+    align-self: flex-start !important;
+    margin-top: 0 !important;
+    left: 0;
+    height: 90vh;
+    width: 20vw;
+    background-color: rgba(255, 255, 255, 0.736);
+    
+ }
+
+ .profileHeader {
+    /* float: left; */
+    margin-top: 0 !important;
+    margin-left:0 !important;
+    left: 0;
+    width: 40vw !important;
+    /* background-color: white; */
+ }
+ .innerProfileHeader {
+    background-color: green;
+ }
+
  .innerProfileHeader {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100% !important;
-    width: 80% !important;
+    width: 100% !important;
     background: rgba(255, 255, 255, 0.381) !important;
-    border-radius: 16px  !important;
+    /* border-radius: 16px  !important; */
     box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.1) !important;
     backdrop-filter: blur(5px) !important;
     -webkit-backdrop-filter: blur(5px) !important;
@@ -86,12 +121,13 @@
 .profilePosts {
     display: flex;
     flex-direction: column;
-    justify-content: center !important;
+    justify-content: flex-start !important;
     align-items: center;
-    width: 60% !important;
+    width: 40% !important;
     /* border: 1px solid black; */
-    
-
+    overflow-y: auto;    
+    height: 89vh !important;
+    /* background-color: black; */
 }
 
 .profileStats {
