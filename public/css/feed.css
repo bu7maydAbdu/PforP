@@ -183,6 +183,8 @@ section{
 }
 
 .navBtns a {
+    /* display: flex; */
+    /* justify-content: space-around; */
     margin: 10px 0;
     /* border: 1px solid black; */
     /* background-color: rgba(148, 233, 216, 0.125) ; */
