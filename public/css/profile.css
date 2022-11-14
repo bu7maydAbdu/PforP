@@ -33,6 +33,11 @@
  }
 
 
+ .fa-scroll , .fa-user-tie , .fa-question {
+    margin: 0 20px;
+    font-size: 30px;
+ }
+
  .SideMenu {
     /* position: absolute !important; */
     align-self: flex-start !important;
