@@ -49,6 +49,12 @@
     
  }
 
+
+ .center-section {
+
+   display: flex;
+   flex-direction: column;
+ }
  .profileHeader {
     /* float: left; */
     margin-top: 0 !important;
@@ -113,7 +119,21 @@
     height: fit-content;
     /* border: 1px solid black; */
 }
-
+.bio {
+   background: rgba(255, 255, 255, 0.381) !important;
+   width: 40vw !important;
+   height: fit-content;
+   /* padding: 0 0 50px 0; */
+   box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.1) !important;
+   backdrop-filter: blur(5px) !important;
+   -webkit-backdrop-filter: blur(5px) !important;
+   text-align: left !important;
+}
+.bio p {
+   /* background-color: black; */
+   width: 90%;
+   margin-left: 20px;
+}
 .profilePosts, .profileStats {
    
     margin: 0 10px;
