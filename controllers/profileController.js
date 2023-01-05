@@ -3,6 +3,8 @@ const express = require("express")
 const User = require("../models/User")
 const Post = require("../models/Post")
 const ProfileInfo = require("../models/ProfileInfo")
+const Comment = require("../models/Comment")
+
 
 
 
@@ -12,13 +14,14 @@ module.exports = {
         console.log(request.params)
         const myProfileInfos = await ProfileInfo.findOne({user : request.user.id}).lean()
         const profile = await User.findById({_id : request.params.id})
+        const comments = await Comment.find({createdBy : request.params.id}).lean()
         if (profile) {
 
             const profileInfos = await ProfileInfo.find({user : request.params.id}).lean()
         const posts = await Post.find({ createdBy: request.params.id})
         console.log(profile)
         // console.log(posts)
-        response.render("profile.ejs" , {profile : profile, user : request.user, posts :posts , profileInfos : profileInfos, myProfileInfos : myProfileInfos})
+        response.render("profile.ejs" , {profile : profile, user : request.user, posts :posts , profileInfos : profileInfos, myProfileInfos : myProfileInfos , comments : comments})
 
         }else {
 

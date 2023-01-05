@@ -126,7 +126,31 @@
 
     <section class=" stamps">
 
-      <h4 class="badge"><i class="fa-regular fa-newspaper"></i> Posts made : <%= posts.length %></h4>
+      <section class="badge">
+        <h4 ><i class="fa-regular fa-newspaper"></i> Posts made <br>  <b class="badge-number"><%= posts.length %></b></h4>
+      </section>
+
+      
+      <section class="badge">
+        <h4 ><i class="fa-regular fa-newspaper"></i> Replies <br>  <b class="badge-number"><%= comments.length %></b></h4>
+      </section>
+
+      <% let count = 0 %>
+
+      <% for(let i = 0 ; i < posts.length ; i++){ %>
+
+      <% count = count + posts[i].promotes %>
+
+      <% } %>
+
+
+      <section class="badge">
+        <h4 ><i class="fa-regular fa-newspaper"></i> liked by <br>
+       
+      <b class="badge-number"><%= count %></b></h4>
+
+     </section>
+      
 
            
     </section>
