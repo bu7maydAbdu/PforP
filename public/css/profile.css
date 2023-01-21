@@ -126,7 +126,7 @@
 }
 .bio {
    background: rgba(255, 255, 255, 0.381) !important;
-   width: 40vw !important;
+   width: 100% !important;
    height: fit-content;
    /* padding: 0 0 50px 0; */
    box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.1) !important;
@@ -166,7 +166,7 @@
    -webkit-backdrop-filter: blur(5px) !important;
    text-align: center;
     color:  rgb(0, 176, 141) !important;
-    margin: 0 auto;
+    margin: 10px auto;
 }
 .badge-number {
    font-size:5rem;
@@ -210,11 +210,44 @@
 
 }
 
-/* @media all and (max-width : 1200px) {
+@media all and (max-width : 1200px) {
    .stamps {
       grid-template-columns: 1fr 1fr;
    }
-} */
+}
+
+
+
+@media all and (max-width : 1123px) {
+main {
+  flex-direction: column;
+}
+.SideMenu {
+   display: none;
+}
+.center-section {
+    width: 80vw !important;
+    margin: 0 auto;
+}
+.profilePosts {
+   margin:  0 auto;
+   width: 80vw !important;
+}
+
+.burgerMenu {
+   display: block;
+   font-size: 30px;
+}
+
+.sideMenu , .topNavigation {
+   display: none !important;
+}
+
+.feed-center {
+   width: 90% !important;
+}
+  
+}
 
 
 @media all and (max-width : 893px) {
@@ -233,4 +266,9 @@
     .innerProfileHeader  , .bio{
         width: 100% !important;
     }
+
+    .center-section {
+      width: 100vw !important;
+      
+  }
 }
