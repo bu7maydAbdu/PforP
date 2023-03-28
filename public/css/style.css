@@ -47,7 +47,8 @@ header  {
     -webkit-backdrop-filter: blur(5px) !important;
     font-family: "roboto", cursive;
     text-decoration: none;
-    color: black;
+    /* color: black; */
+        color:rgb(13, 106, 87) ;
     font-weight: bold;
 }
 
@@ -85,9 +86,12 @@ header  {
 .sloganDiv {
     /* border: 1px solid black; */
     width: 100%;
+    color:rgb(13, 106, 87) ;
+
 }
  .sloganDiv p {
     font-size:  20px;
+    color:rgb(13, 106, 87) ;
  }
 
 .slogan {
@@ -128,6 +132,7 @@ header  {
     border: none;
     /* background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(148,233,216,1) 100%); */
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgb(13, 106, 87) 100%);
+    color:rgb(13, 106, 87) ;
 
     font-size: 2em;
     font-weight: bold;
